@@ -1,0 +1,17 @@
+.sideNavWrapper{
+    height: -webkit-fill-available;
+    padding-top: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+.sideNavLabelWrapper{
+    background: inherit;
+}
+.sideNavLabelWrapperActive{
+    background: mediumseagreen;
+}
+.sideNavLabel{
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}

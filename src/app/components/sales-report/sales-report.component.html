@@ -1,0 +1,86 @@
+
+        <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+
+            <mat-grid-tile *ngFor="let mc of miniCardData" [colspan]="( cardLayout | async )?.miniCard?.cols"
+              [rowspan]="( cardLayout | async )?.miniCard?.rows">
+              <!-- <app-card title="Card "> -->
+                <app-mini-card [icon]="mc.icon" [title]="mc.title" [value]="mc.value" [color]="mc.color" [isIncrease]="mc.isIncrease" duration="since last month" [percentValue]="mc.percentValue" [isCurrency]="mc. isCurrency"></app-mini-card>
+             <!-- </app-card> -->
+            </mat-grid-tile>
+        
+            <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+              <app-card title="Region ">
+                  <!-- <app-annual-sales-chart></app-annual-sales-chart> -->
+                  <app-region-pi-chart></app-region-pi-chart>
+              </app-card>
+           </mat-grid-tile>
+           <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+            <app-card title="Sales & Units">
+              <app-item-sales-chart></app-item-sales-chart>
+            </app-card>
+         </mat-grid-tile>
+         
+        
+            <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows" style="display: 'inherit';" class="tableGriidTile">
+                <!-- <app-card title="sales rder"> -->
+                <div class="mat-elevation-z8 small-table">
+                    <table mat-table class="full-width-table" [dataSource]="dataSource" aria-label="Elements">
+                  
+ 
+                      <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                      </ng-container>
+                  
+
+                      <!-- <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                      </ng-container> -->
+                  
+
+                      <ng-container matColumnDef="weight">
+                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                      </ng-container>
+                  
+
+                      <ng-container matColumnDef="salesNo">
+                        <th mat-header-cell *matHeaderCellDef> Sales No </th>
+                        <td mat-cell *matCellDef="let element"> S0-{{element.salesNo}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="customerName">
+                        <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="salesPersonName">
+                        <th mat-header-cell *matHeaderCellDef> Sales Person Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.salesPersonName}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="amount">
+                        <th mat-header-cell *matHeaderCellDef> Amount </th>
+                        <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="noOfItems">
+                        <th mat-header-cell *matHeaderCellDef> No Of Items </th>
+                        <td mat-cell *matCellDef="let element"> {{element.noOfItems}} </td>
+                      </ng-container>
+
+                  
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                  
+                    
+                  </div>
+                  <mat-paginator [pageSizeOptions]="[10, 20]"
+                                   showFirstLastButtons
+                                   aria-label="Select page of periodic elements">
+                    </mat-paginator>
+                <!-- </app-card> -->
+            </mat-grid-tile>
+          </mat-grid-list>

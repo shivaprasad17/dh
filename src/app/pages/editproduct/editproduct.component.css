@@ -1,0 +1,12 @@
+.titleDiv {
+    display: grid;
+  }
+  .submitBtn {
+    background: #1976d2;
+    color: white;
+    margin-right: 15px;
+  }
+  .optionsDiv {
+    float: right;
+    margin-top: 20px;
+  }

@@ -1,0 +1,49 @@
+.formControler {
+    width: -webkit-fill-available;
+    height: inherit;
+    display: grid;
+  }
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    /* border: 1px solid #d5dee7; */
+  }
+  mat-form-field.mat-form-field {
+    font-size: 10px;
+  }
+  .formLabel {
+    font-size: 8pt;
+    color: #666666;
+  }
+  .requiredAstric {
+    color: red;
+  }
+  .nameField {
+    width: 80%;
+    padding-top: 15px;
+    padding-right: 10px;
+  }
+  .footerTile > ::ng-deep .mat-grid-tile-content {
+    justify-content: end !important;
+  }
+  .submitBtn {
+    background: #1976d2;
+    color: white;
+    margin-right: 15px;
+  }
+  
+  ::ng-deep
+    .mat-form-field-appearance-outline.mat-form-field-disabled
+    .mat-form-field-outline {
+    background: gainsboro !important;
+  }
+.formLabel{
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  ngx-dropzone{
+      height: 250px;
+      width: 350px;
+  }
+  

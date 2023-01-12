@@ -1,0 +1,13 @@
+<mat-grid-list cols="2" rowHeight="55px" gutterSize="20px">
+    <mat-grid-tile class="gridTileLeft">
+        <div class="titleDiv">
+            <app-titleone>Product Items</app-titleone>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="gridTileRight">
+        <button mat-raised-button class="addBtn" routerLink="/add-product">Add New Product</button>
+    </mat-grid-tile>
+</mat-grid-list>
+<div>
+    <app-productlist [productDetails]=productDetails></app-productlist>
+</div>

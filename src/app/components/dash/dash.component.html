@@ -1,0 +1,175 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <div>
+    <h3 class="mat-h3">Filters</h3>
+
+    <div>
+      <form [formGroup]="filterDetailsForm">
+        <mat-grid-list cols="6" rowHeight="80px" gutterSize="20px">
+          <mat-grid-tile>
+            <div class="formControler">
+                <mat-form-field appearance="outline">
+                  <mat-label class="formLabel">Category</mat-label>
+                    <mat-select name="type" formControlName="category">
+                      <mat-option value="All">
+                        All
+                     </mat-option>
+                        <mat-option value="Food Product">
+                           Food Product
+                        </mat-option>
+                        <mat-option value="Grocery">
+                            Grocery
+                         </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+        <mat-grid-tile>
+          <div class="formControler">
+            <div >
+              <mat-form-field appearance="outline" style="width: 80%;">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate placeholder="Start date" formControlName="startDate">
+                  <input matEndDate placeholder="End date" formControlName="endDate">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+              </mat-form-field>
+                
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+            </div>
+      
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="formControler">
+              <mat-form-field appearance="outline" >
+                <mat-label class="formLabel">Customer</mat-label>
+                  <mat-select name="type" formControlName="customerName">
+                    <mat-option value="All">
+                      All
+                    </mat-option>
+                    <mat-option value="Ravi">
+                      Ravi
+                    </mat-option>
+                    <mat-option value="Manish">
+                      Manish
+                    </mat-option>
+                    <mat-option value="Prasad">
+                      Prasad
+                    </mat-option>
+                    <mat-option value="Ketan">
+                      Ketan
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+          </div>
+      </mat-grid-tile> 
+
+      <mat-grid-tile>
+        <div class="formControler">
+            <mat-form-field appearance="outline">
+              <mat-label class="formLabel">Sales Person</mat-label>
+                <mat-select name="type" formControlName="salesPersonName">
+                  <mat-option value="All">
+                    All
+                 </mat-option>
+                 <mat-option value="Dinesh">
+                    Dinesh
+               </mat-option>
+               <mat-option value="Shiva">
+                  Shiva
+             </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </mat-grid-tile> 
+    
+    <mat-grid-tile>
+      <div class="formControler">
+        <mat-form-field appearance="outline">
+          <mat-label class="formLabel">Region</mat-label>
+          <mat-select name="type" formControlName="region">
+              <mat-option value="All">
+                All
+              </mat-option>
+              <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
+              <mat-option value="karnataka">karnataka</mat-option>
+              <mat-option value="Telangana">Telangana</mat-option>
+          </mat-select>
+      </mat-form-field>
+      </div>
+  </mat-grid-tile> 
+
+    <mat-grid-tile>
+      <div class="formControler">
+          <mat-form-field appearance="outline">
+            <mat-label class="formLabel">Item</mat-label>
+              <mat-select name="type" formControlName="itemName">
+                <mat-option value="All">
+                  All
+               </mat-option>
+               <mat-option value="Rishika Sunnundalu 200gms">
+                Rishika Sunnundalu 200gms
+             </mat-option>
+             <mat-option value=" Rishika Instant Idli Mix (Pack of 2)">
+              Rishika Instant Idli Mix (Pack of 2)
+           </mat-option>
+           <mat-option value="Urad Gota 1/2 kg Eco Pack (Pack of 2)">
+            Urad Gota 1/2 kg Eco Pack (Pack of 2)
+         </mat-option>
+               
+              
+               
+              </mat-select>
+          </mat-form-field>
+      </div>
+  </mat-grid-tile> 
+        </mat-grid-list>
+      </form>
+    </div>
+    <app-sales-report></app-sales-report>
+  </div>
+  <!-- <cdk-accordion class="example-accordion">
+    <cdk-accordion-item
+      *ngFor="let item of items; let index = index;"
+      #accordionItem="cdkAccordionItem"
+      class="example-accordion-item"
+      role="button"
+      tabindex="0"
+      [attr.id]="'accordion-header-' + index"
+      [attr.aria-expanded]="accordionItem.expanded"
+      [attr.aria-controls]="'accordion-body-' + index">
+      <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+        {{ item }}
+        <span class="example-accordion-item-description">
+          Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+        </span>
+      </div>
+      <div
+        class="example-accordion-item-body"
+        role="region"
+        [style.display]="accordionItem.expanded ? '' : 'none'"
+        [attr.id]="'accordion-body-' + index"
+        [attr.aria-labelledby]="'accordion-header-' + index">
+        <div *ngIf="item==='Sales Report'">
+          <app-sales-report></app-sales-report>
+        </div>
+        <div *ngIf="item==='Sales By Sales Person'">
+          <app-sales-by-sales-person></app-sales-by-sales-person>
+        </div>
+        <div *ngIf="item==='Sales by Customer'">
+          <app-sales-by-customers></app-sales-by-customers>
+        </div>
+        <div *ngIf="item==='Sales by Item'">
+          <app-sales-by-item></app-sales-by-item>
+        </div>
+      </div>
+    </cdk-accordion-item>
+  </cdk-accordion> -->
+
+
+
+ </div>

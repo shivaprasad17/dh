@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+  }
+  .saleReportContainer{
+    max-height: 500px;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .small-table{
+    height: 550px;
+    overflow-x: scroll !important;
+  }
+.tableGriidTile > ::ng-deep .mat-grid-tile-content{
+      display: inherit !important;
+  }

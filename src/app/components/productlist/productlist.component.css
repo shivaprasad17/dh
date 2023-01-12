@@ -1,0 +1,78 @@
+table {
+    width: 100%;
+
+  }
+
+
+  .example-container {
+    max-height: 700px;
+    max-width: 100%;
+    overflow: auto;
+  }
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .tableHeader {
+    background: #e5e5e5 none !important;
+    text-transform: uppercase;
+  }
+  td.mat-cell {
+    color: black;
+  }
+  .editIcon {
+    font-size: 20px;
+    color: #607799;
+    cursor: pointer;
+  }
+  .deleteIcon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .imageUrl{
+    height: 30px;
+  }
+
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .example-element-diagram {
+    border-right: 1px solid gainsboro;
+    width: 35%;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    /* height: 104px; */
+  }
+  
+  .example-element-symbol {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+    display: grid;
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }

@@ -1,0 +1,13 @@
+
+<div class="titleDiv">
+    <app-titleone>Product Details</app-titleone>  
+    <app-titletwo>{{productDetailsForm.value.name}}</app-titletwo> 
+</div>
+<div>
+    <app-addproductform [productdetails]=productDetailsForm (onSelect)="onSelect($event)" [files]=files (onRemove)="onRemove($event)" (onChangeDiscount)="onChangeDiscount($event)" (calculateDiscount)="calculateDiscount($event)"></app-addproductform>
+    <!-- <app-bankdetailsform [bankdetails]=bankDetailsForm (submitBankDetails)="submitBankDetails($event)" [bankTypeList]="bankTypeList" [paymentFileFormatList]="paymentFileFormatList"></app-bankdetailsform> -->
+</div>
+<div class="optionsDiv">
+    <button mat-raised-button class="submitBtn" (click)="editProductDetails()" [disabled]="!productDetailsForm.valid">Submit</button>
+    <button mat-raised-button class="cancelBtn" (click)="onClickCancel()">Cancel</button>
+</div>

@@ -1,0 +1,17 @@
+<div class="sideNavWrapper">
+        <div *ngFor="let r of routerLinks" >
+            <div    [ngClass]="{sideNavLabelWrapperActive:r.isActive===true,sideNavLabelWrapper:r.isActive===false}" (click)="navigate(r.url)">
+                <div class="sideNavLabel">
+                   {{r.labelName}}
+                </div>
+            </div>
+        </div>
+        
+
+    
+    <!-- <div class="sideNavLabelWrapper" (click)="navigate('/sales-order')">
+        <div class="sideNavLabel">
+            Sales Order
+        </div>
+    </div> -->
+</div>

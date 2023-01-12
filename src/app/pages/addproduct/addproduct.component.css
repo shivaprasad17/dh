@@ -1,0 +1,22 @@
+.titleDiv {
+    display: grid;
+  }
+  
+  .submitBtn {
+    background: #1976d2;
+    color: white;
+    margin-right: 15px;
+  }
+  
+  ::ng-deep mat-tab-header {
+    background-color: #607799 !important;
+    height: 35px;
+  }
+  ::ng-deep .mat-tab-label {
+    height: 35px !important;
+    color: white;
+  }
+  .optionsDiv {
+    float: right;
+    margin-top: 20px;
+  }
